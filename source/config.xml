@@ -51,9 +51,9 @@
     <package name='module-init-tools'/>
   </packages>
   <repository type='rpm-md'>
-    <source path='http://download.opensuse.org/update/13.1/'/>
+    <source path='http://mirrors.sohu.com/opensuse/update/13.1/'/>
   </repository>
   <repository type='yast2'>
-    <source path='http://download.opensuse.org/distribution/13.1/repo/oss/'/>
+    <source path='http://mirrors.sohu.com/opensuse/distribution/13.1/repo/oss/'/>
   </repository>
 </image>
