@@ -6,12 +6,13 @@
     <specification>A text-only base</specification>
   </description>
   <preferences>
-    <type checkprebuilt='true' boot='oemboot/suse-13.1' fsnocheck='true' filesystem='ext3' bootloader='grub2' kernelcmdline='quiet' image='oem'>
-      <oemconfig>
-        <oem-swap>true</oem-swap>
-        <oem-swapsize>512</oem-swapsize>
-        <oem-boot-title>Stallman's openSUSE 13.1, Server</oem-boot-title>
-      </oemconfig>
+    <type checkprebuilt='true' boot='vmxboot/suse-13.1' fsnocheck='true' filesystem='ext3' bootloader='grub2' primary='true' format='vmdk' kernelcmdline='quiet' image='vmx'>
+      <machine memory='512' arch='x86_64' guestOS='suse-64'>
+        <vmdisk controller='scsi' id='0'/>
+        <vmdvd controller='ide' id='0'/>
+        <vmnic driver='e1000' interface='0' mode='bridged'/>
+      </machine>
+      <size unit='M' additive='false'>16384</size>
     </type>
     <version>0.0.1</version>
     <packagemanager>zypper</packagemanager>
@@ -40,6 +41,7 @@
     <package name='yast2'/>
     <package name='yast2-firstboot'/>
     <package name='zypper'/>
+    <package name='open-vm-tools'/>
     <archive name='plymouth.tar' bootinclude='true'/>
     <package name='gfxboot-devel' bootinclude='true'/>
   </packages>
