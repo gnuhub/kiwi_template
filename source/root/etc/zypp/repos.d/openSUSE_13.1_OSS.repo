@@ -1,0 +1,7 @@
+[openSUSE_13.1_OSS]
+name=openSUSE_13.1_OSS
+baseurl=http://download.opensuse.org/distribution/13.1/repo/oss/
+type=yast2
+enabled=1
+autorefresh=1
+gpgcheck=1

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<image name='Stallmans_openSUSE_13.1_Server' displayname='Stallmans_openSUSE_13.1_Server' schemaversion='5.2'>
+  <description type='system'>
+    <author>Stallman Wang</author>
+    <contact>studio-devel@suse.de</contact>
+    <specification>A text-only base</specification>
+  </description>
+  <preferences>
+    <type checkprebuilt='true' boot='oemboot/suse-13.1' fsnocheck='true' filesystem='ext3' bootloader='grub2' kernelcmdline='quiet' image='oem'>
+      <oemconfig>
+        <oem-swap>true</oem-swap>
+        <oem-swapsize>512</oem-swapsize>
+        <oem-boot-title>Stallman's openSUSE 13.1, Server</oem-boot-title>
+      </oemconfig>
+    </type>
+    <version>0.0.1</version>
+    <packagemanager>zypper</packagemanager>
+    <rpm-check-signatures>false</rpm-check-signatures>
+    <rpm-force>false</rpm-force>
+    <boot-theme>studio</boot-theme>
+    <timezone>UTC</timezone>
+    <hwclock>localtime</hwclock>
+    <locale>en_US</locale>
+  </preferences>
+  <users group='root'>
+    <user name='root' pwd='$1$KZ6vOKws$iZi48Jhq5nIbvhbugApnf/' home='/root' shell='/bin/bash'/>
+  </users>
+  <packages type='image' patternType='onlyRequired'>
+    <opensusePattern name='base'/>
+    <package name='SuSEfirewall2'/>
+    <package name='grub2'/>
+    <package name='glibc-locale'/>
+    <package name='iputils'/>
+    <package name='kernel-default'/>
+    <package name='less'/>
+    <package name='plymouth'/>
+    <package name='syslog-ng'/>
+    <package name='vim'/>
+    <package name='yast2'/>
+    <package name='yast2-firstboot'/>
+    <package name='zypper'/>
+    <archive name='plymouth.tar' bootinclude='true'/>
+    <package name='gfxboot-devel' bootinclude='true'/>
+  </packages>
+  <packages type='bootstrap'>
+    <package name='filesystem'/>
+    <package name='glibc-locale'/>
+    <package name='module-init-tools'/>
+  </packages>
+  <repository type='rpm-md'>
+    <source path='http://download.opensuse.org/update/13.1/'/>
+  </repository>
+  <repository type='yast2'>
+    <source path='http://download.opensuse.org/distribution/13.1/repo/oss/'/>
+  </repository>
+  <repository type='rpm-md'>
+    <source path='{gnuhub openSUSE 13.1}'/>
+  </repository>
+</image>

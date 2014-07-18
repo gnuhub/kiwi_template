@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <studio_uuid>8466bd24-fd59-11df-9f90-475ae2f5345b</studio_uuid>
+  <appliance_uuid>b5531630-0e17-11e4-5aad-a31de2e61522</appliance_uuid>
+  <config>
+    <image name="Stallmans_openSUSE_13.1_Server" displayname="Stallmans_openSUSE_13.1_Server" schemaversion="5.2">
+      <description type="system">
+        <author>Stallman Wang</author>
+        <contact>studio-devel@suse.de</contact>
+        <specification>A text-only base</specification>
+      </description>
+      <preferences>
+        <type checkprebuilt="true" boot="oemboot/suse-13.1" fsnocheck="true" filesystem="ext3" bootloader="grub2" kernelcmdline="quiet" image="oem">
+          <oemconfig>
+            <oem-swap>true</oem-swap>
+            <oem-swapsize>512</oem-swapsize>
+            <oem-boot-title>Stallman's openSUSE 13.1, Server</oem-boot-title>
+          </oemconfig>
+        </type>
+        <version>0.0.1</version>
+        <packagemanager>ensconce</packagemanager>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <rpm-force>false</rpm-force>
+        <boot-theme>studio</boot-theme>
+        <timezone>UTC</timezone>
+        <hwclock>localtime</hwclock>
+        <locale>en_US</locale>
+      </preferences>
+      <users group="root">
+        <user name="root" pwd="$1$KZ6vOKws$iZi48Jhq5nIbvhbugApnf/" home="/root" shell="/bin/bash"/>
+      </users>
+      <repository type="rpm-md">
+        <source path="http://download.opensuse.org/update/13.1/"/>
+      </repository>
+      <repository type="yast2">
+        <source path="http://download.opensuse.org/distribution/13.1/repo/oss/"/>
+      </repository>
+      <repository type="rpm-md">
+        <source path="http://susestudio.com/user_repos/1OXxJbTNn7LrcnmA4TYB/"/>
+      </repository>
+      <packages type="image" patternType="onlyRequired">
+        <opensusePattern name="base"/>
+        <package name="SuSEfirewall2"/>
+        <package name="grub2"/>
+        <package name="glibc-locale"/>
+        <package name="iputils"/>
+        <package name="kernel-default"/>
+        <package name="less"/>
+        <package name="plymouth"/>
+        <package name="syslog-ng"/>
+        <package name="vim"/>
+        <package name="yast2"/>
+        <package name="yast2-firstboot"/>
+        <package name="zypper"/>
+        <archive name="plymouth.tar" bootinclude="true"/>
+        <package name="gfxboot-devel" bootinclude="true"/>
+      </packages>
+      <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="glibc-locale"/>
+        <package name="module-init-tools"/>
+      </packages>
+    </image>
+  </config>
+  <extra_config name="Stallmans_openSUSE_13.1_Server">
+    <appliance_id>1228508</appliance_id>
+    <arch>x86_64</arch>
+    <version>0.0.1</version>
+    <logo>02/d3230a1e4c9773cc12fa74982a16d2</logo>
+    <background>fe/38f99378655344a098ace03058cbbb</background>
+    <base_system>13.1</base_system>
+    <image_type>oem</image_type>
+    <time_zone>UTC</time_zone>
+    <region>Global</region>
+    <default_runlevel>3</default_runlevel>
+    <install_recommended>false</install_recommended>
+    <xen_host>false</xen_host>
+    <exclude_docs>false</exclude_docs>
+    <disable_branding>false</disable_branding>
+    <template>openSUSE 13.1, Server</template>
+    <locale>
+      <language>en_US.UTF-8</language>
+      <keytable>us.map.gz</keytable>
+    </locale>
+    <estimated_size>970</estimated_size>
+    <size_offset>0</size_offset>
+    <non_interactive>false</non_interactive>
+    <oem_disk_size>16G</oem_disk_size>
+    <check_supportability>false</check_supportability>
+    <repository type="rpm-md">
+      <source path="http://download.opensuse.org/update/13.1/" internal="false"/>
+      <name>openSUSE 13.1 Updates</name>
+    </repository>
+    <repository type="yast2">
+      <source path="http://download.opensuse.org/distribution/13.1/repo/oss/" internal="false"/>
+      <name>openSUSE 13.1 OSS</name>
+    </repository>
+    <network config="dhcp">
+    </network>
+    <startup_programs>
+    </startup_programs>
+    <overlay_files remove="">
+    </overlay_files>
+    <firewall>
+      <firewall_enabled>yes</firewall_enabled>
+      <firewall_ssh>opened</firewall_ssh>
+      <firewall_http>opened</firewall_http>
+      <firewall_webyast>closed</firewall_webyast>
+    </firewall>
+    <webyast enabled="false" version="">
+    </webyast>
+    <x_keyboard model="microsoftpro" layout="us" variant="" keycode="xfree86" LA="" RA="" SL="" RC="" OPT=""/>
+    <enable_root_firstboot>false</enable_root_firstboot>
+    <window_manager/>
+    <display_manager/>
+  </extra_config>
+</manifest>

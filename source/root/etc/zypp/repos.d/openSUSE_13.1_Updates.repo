@@ -1,0 +1,7 @@
+[openSUSE_13.1_Updates]
+name=openSUSE_13.1_Updates
+baseurl=http://download.opensuse.org/update/13.1/
+type=rpm-md
+enabled=1
+autorefresh=1
+gpgcheck=1
