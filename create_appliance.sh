@@ -14,7 +14,7 @@ image_arch='x86_64'
 schema_ver='5.2'
 base_system='13.1'
 uefi_enabled='false'
-declare -a repos=("gnuhub openSUSE 13.1")
+declare -a repos=()
 
 dir="$(dirname $0)"
 src="$dir/source"

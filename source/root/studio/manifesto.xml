@@ -35,11 +35,9 @@
       <repository type="yast2">
         <source path="http://download.opensuse.org/distribution/13.1/repo/oss/"/>
       </repository>
-      <repository type="rpm-md">
-        <source path="http://susestudio.com/user_repos/1OXxJbTNn7LrcnmA4TYB/"/>
-      </repository>
       <packages type="image" patternType="onlyRequired">
         <opensusePattern name="base"/>
+        <package name="grub"/>
         <package name="SuSEfirewall2"/>
         <package name="grub2"/>
         <package name="glibc-locale"/>
@@ -82,7 +80,7 @@
       <language>en_US.UTF-8</language>
       <keytable>us.map.gz</keytable>
     </locale>
-    <estimated_size>970</estimated_size>
+    <estimated_size>980</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive>false</non_interactive>
     <oem_disk_size>16G</oem_disk_size>

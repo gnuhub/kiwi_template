@@ -27,6 +27,7 @@
   </users>
   <packages type='image' patternType='onlyRequired'>
     <opensusePattern name='base'/>
+    <package name='grub'/>
     <package name='SuSEfirewall2'/>
     <package name='grub2'/>
     <package name='glibc-locale'/>
@@ -52,8 +53,5 @@
   </repository>
   <repository type='yast2'>
     <source path='http://download.opensuse.org/distribution/13.1/repo/oss/'/>
-  </repository>
-  <repository type='rpm-md'>
-    <source path='{gnuhub openSUSE 13.1}'/>
   </repository>
 </image>
